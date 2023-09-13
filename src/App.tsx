@@ -100,7 +100,7 @@ export function App() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="title">Título do YT</SelectItem>
-                  <SelectItem value="description">Descrição YT</SelectItem>
+                  <SelectItem value="description">Descrição youtube</SelectItem>
                 </SelectContent>
               </Select>
             </div>
