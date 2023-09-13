@@ -62,7 +62,7 @@ export function App() {
               className="border flex rounded-md aspect-video cursor-pointer border-dashed text-sm flex-col gap-2 items-center justify-center text-muted-foreground hover:bg-primary/10 transition-colors"
             >
               <FileVideo className="w-4 h-4" />
-              Selecione o vídeo
+              Selecione o vídeo!
             </label>
 
             <input
