@@ -1,0 +1,38 @@
+# @name get-prompts
+
+GET http://localhost:3333/prompts
+
+### 
+# @name upload
+POST http://localhost:3333/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="exampleg1.mp3"
+Content-Type: audio/mpeg
+
+< ./exampleg1.mp3
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+# @name create-transcription
+
+POST http://localhost:3333/videos/5784124b-e695-497c-8f2f-90a2d72f952f/transcription
+Content-Type: application/json
+
+{
+  "prompt": "pix, nada"
+}
+
+###
+# @name generate-ai-completion
+
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "5784124b-e695-497c-8f2f-90a2d72f952f",
+  "temperature": 0.5,
+  "template": "gere um resumo da trascrição do video: '''{transcription}'''"
+}
+
