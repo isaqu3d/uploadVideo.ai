@@ -17,11 +17,11 @@ Content-Type: audio/mpeg
 ###
 # @name create-transcription
 
-POST http://localhost:3333/videos/5784124b-e695-497c-8f2f-90a2d72f952f/transcription
+POST http://localhost:3333/videos/be106b47-228a-49e8-b18c-d25583bfbe55/transcription
 Content-Type: application/json
 
 {
-  "prompt": "pix, nada"
+  "prompt": "g1, preso"
 }
 
 ###
@@ -31,8 +31,8 @@ POST http://localhost:3333/ai/complete
 Content-Type: application/json
 
 {
-  "videoId": "5784124b-e695-497c-8f2f-90a2d72f952f",
+  "videoId": "be106b47-228a-49e8-b18c-d25583bfbe55",
   "temperature": 0.5,
-  "template": "gere um resumo da trascrição do video: '''{transcription}'''"
+  "prompt": "gere um resumo da trascrição do video: '''{transcription}'''"
 }
 
